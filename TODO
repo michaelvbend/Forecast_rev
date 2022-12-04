@@ -1,0 +1,4 @@
+1. Page with dropdown campaign_id
+    Is done, but want to make it with a sqlite database
+2. Submit -> runs function that calculates the coef, intercept
+3. Page with input field (EURO) that predicts (clicks,impressions,etc.)
