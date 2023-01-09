@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %} My Account {% endblock %}
+{% block content %}
+
+<div class="container p-5 pt-4 mt-0 my-5 bg-primary bg-opacity-75 text-white" style="border-radius:25px">
+    <p class="display-1 pb-1">My Account</p>
+    <hr>
+    <div class="row gx-5">
+        <div class="col-lg-6 p-4 mb-5"
+             style="background-color: white; color: black;border-top-left-radius: 10px 10px; border-bottom-left-radius: 10px 10px;">
+            <h2>My Predictions</h2>
+            <hr>
+
+            <ul class="list-group">
+                {% for prediction in predictions %}
+
+                <a href="{{url_for('generate_pdf', prediction_id=prediction.id)}}" class="list-group-item list-group-item-action">
+
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">{{prediction.prediction_name}}</h5>
+                        <small>Download PDF</small>
+                    </div>
+                    <p class="mb-1">Campaign: {{prediction.prediction_campaign}}</p>
+                    <p class="mb-1">Target: {{prediction.predicted_column}}</p>
+                    <small>Date: {{prediction.date}}</small>
+                </a>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-lg-6 p-4 mb-5"
+             style="background-color: white; color: black;border-top-right-radius: 10px 10px; border-bottom-right-radius: 10px 10px;">
+            <h2>My Details</h2>
+            <hr>
+            <h5>Username: {{current_user.username}}</h5>
+            <h5>Dowload data: <a href="static/data.csv" download="data.csv">Data</a></h5>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
