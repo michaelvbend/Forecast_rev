@@ -7,7 +7,7 @@ from sklearn.metrics import r2_score
 from sklearn.model_selection import train_test_split
 
 def load_data() -> pd.DataFrame:
-    file = "data.csv"
+    file = "static/data.csv"
     df = pd.read_csv(file)
     df = df[["reporting_start", "reporting_end", "spent", "impressions", "clicks", "campaign_id"]]
 

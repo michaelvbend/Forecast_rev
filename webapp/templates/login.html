@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block title %}
+Login
+{% endblock %}
+{% block content %}
+
+<div class="container" style="max-width: 750px">
+
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            {% for category, message in messages %}
+            <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                </button>
+            </div>
+
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+            <form class="form-control" method="post", style="border-color: white;">
+                <div class="p-3">
+                    <h2>Login</h2>
+                   {{ form.hidden_tag() }}
+                    <div class="form-group row">
+                        <label class="col-m-2 col-form-label">Username:</label>
+                        <div class="col-m-10">
+                            {{ form.username(class="form-control") }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-m-2 col-form-label" for="preds">Password:</label>
+                        <div class="col-m-10">
+                            {{ form.password(class="form-control") }}
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group row">
+
+                        <div class="col-m-10">
+                            {{ form.submit(class="form-control btn btn-secondary")}}
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+</div>
+</div>
+{% endblock %}

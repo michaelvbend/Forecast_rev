@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block title %}
+Prediction
+{% endblock %}
+{% block content %}
+<div class="container p-5 pt-4 mt-0 my-5 bg-primary bg-opacity-75 text-white" style="border-radius:25px">
+    <p class="display-1 pb-1">Prediction machine</p>
+        <div class="row gx-5">
+ <div class="col-lg-6" style="padding: 10px; background-color: white; color: black;border-top-left-radius: 10px 10px; border-bottom-left-radius: 10px 10px;">
+         <div>
+           <h2>Reliability</h2>
+             {% if reliable %}
+             <h4>Your prediction is <span style="color: green">reliable</span></h4>
+             <iframe src="https://giphy.com/embed/UWnKOebQraQhxmZPuC" width="250" height="250" frameBorder="0" class="giphy-embed" ></iframe>
+             <p><i>What does this mean?</i></p>
+             <p>Your prediction is reliable. This is determined by the evaluation values that have been calculated. It is recommended to use this campaign for predictions.</p>
+             {% else %}
+             <h4>Your prediction is <span style="color: red">not reliable</span></h4>
+            <iframe src="https://giphy.com/embed/p2zr5rvgl9TIL2yiLB" width="300" height="300" frameBorder="0" class="giphy-embed"></iframe>
+             <p><i>What does this mean?</i></p>
+             <p>Your prediction is not reliable. This is determined by the evaluation values that have been calculated. It is recommended not to use this campaign for predictions.</p>
+             {% endif %}
+            <p>Would you like to look back at the forecast later and download it as a PDF if necessary? Then save your prediction and go to My Account.</p>
+
+
+        </div>
+         </div>
+            <div class="mobile-only">
+            <hr>
+            </div>
+<div class="col-lg-6" style="padding: 10px; background-color: white; color: black;border-left:5px solid grey;border-top-right-radius: 10px 10px; border-bottom-right-radius: 10px 10px;">
+    <div id="predictions" class="table-responsive">
+            <table class="table table-hover">
+                <thead class="table-primary">
+                <tr>
+                    <th scope="col">Result</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Prediction: <b>{{"%.2f"|format(result)}}</b></td>
+                </tr>
+                {% for metric, value in metrics.items() %}
+                <tr>
+                    <td>{{metric}} : <b>{{"%.2f"|format(value)}}</b></td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div id="predictions" class="table-responsive">
+            <table class="table table-hover">
+                <thead class="table-secondary">
+                <tr>
+                    <th scope="col">Evaluation</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                {% for metric, value in evaluation.items() %}
+                <tr>
+                    <td>{{metric}} : <b>{{"%.2f"|format(value)}}</b></td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+<form method="post">
+                 <input class="form-control btn btn-secondary" type="submit" name="submit-button" value="Save">
+             </form>
+        </div>
+    </div>
+
+
+
+    </div>
+
+</div>
+</div>
+
+
+{% endblock %}
