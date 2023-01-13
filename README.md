@@ -107,14 +107,6 @@ The website is currently only compatible with Facebook ad data.
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install -r requirements.txt
-  ```
-
 ### Installation
 
 1. Clone the repo
@@ -147,6 +139,11 @@ Once logged in, they can choose an existing Facebook ad campaign for which they 
 predictions. Then they can specify whether they want to make predictions for clicks or impressions 
 and enter the number of euros they want to spend. 
 
+<a href="https://ibb.co/qdkcdNk"><img src="https://i.ibb.co/pxJMxfJ/Overview.png" alt="Overview" border="0"></a><br /><a target='_blank' href='https://freeonlinedice.com/'>d&d dice roller</a><br />
+
+The model is built based on this data and the user is shown whether or not the prediction is reliable 
+based on the evaluation values given in a table. The user also has the option to save this prediction 
+in their account.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
