@@ -188,9 +188,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-Michael vd Bend
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/michaelvbend/Forecast_rev)
+Project Link: [https://github.com/michaelvbend/Forecast_rev](https://github.com/michaelvbend/Forecast_rev)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
