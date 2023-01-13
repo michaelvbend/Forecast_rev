@@ -78,7 +78,6 @@ can expect for a given budget.
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://i.ibb.co/2jbkyVV/Demo.png)
-<img src="https://i.ibb.co/2jbkyVV/Demo.png" alt="Logo" width="80" height="80">
 This website is designed to help users make predictions about how many clicks and impressions they 
 can expect for a given budget. This is done through a linear regression model built in Python and 
 using Flask as the back-end framework. Currently, users cannot upload their own dataset, but a 
@@ -93,14 +92,9 @@ The website is currently only compatible with Facebook ad data.
 
 ### Built With
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
+* [![Python][Python]][Next-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -231,8 +225,8 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [product-screenshot]: https://i.ibb.co/2jbkyVV/Demo.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
+[Python]: https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
+[React-url]: https://python.org/
 [Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
 [Vue-url]: https://vuejs.org/
 [Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
