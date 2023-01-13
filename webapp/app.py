@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, session, flash, make_response
 from forms import upload_data, LoginUser, RegisterUser
 from model import User, login_manager, bcrypt,db, login_user, current_user, logout_user, login_required, Predictions
-from clicks_forecast import load_data, transform_data, train_model, predict, evaluate, check_reliablity
+from clicks_forecast import load_data, transform_data, train_model, predict, evaluate, check_reliablity, create_report
 import pdfkit
 from datetime import date
 
@@ -120,10 +120,13 @@ def create_model():
             flash("Prediction saved!", category='success')
             return redirect(url_for("index"))
     reliable = check_reliablity(correlation=evaluation_dict["Correlation"], r_squared=evaluation_dict["R2 Score"])
+    report = create_report(r2=evaluation_dict["R2 Score"], correlation=evaluation_dict["Correlation"], mae=evaluation_dict["Mean Absolute Error (MAE)"],
+                           mse=evaluation_dict["Mean Squared Error (MSE)"])
     return render_template("prediction.html", result = result,
                            metrics={"Coefficient": float(coef),"Intercept": float(intercept)},
                            evaluation=evaluation_dict,
-                           reliable=reliable)
+                           reliable=reliable,
+                           report=report)
 
 @app.route('/account', methods=["GET", "POST"])
 @login_required

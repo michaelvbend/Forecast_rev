@@ -62,4 +62,62 @@ def check_reliablity(correlation: float, r_squared: float) -> bool:
     return correlation >= 0.8 and r_squared >= 0.7
 
 
+def create_report(r2: float, correlation: float, mae: float, mse: float) -> str:
+    """Generates a report/message for end-user to interpret evaluation values"""
+    message_tails = {
+        "good": "This indicates a high accuracy",
+        "neutral": "There is room for improvement",
+        "bad": "The model's performance needs to be improved"
+    }
+
+    r2_tails = {
+        2: "indicating that most of the variation in the data is explained by the model",
+        1: "indicating that some of the variation in the data is explained by the model",
+        0: "indicating that almost none of the variation in the data is explained by the model"
+    }
+
+    me_tails = {
+        2: "suggesting that the model has a very small deviation from actual values",
+        1: "suggesting that the model has a moderate deviation from actual values",
+        0: "suggesting that the model has a large deviation from actual values"
+    }
+
+    # Generate R squared report
+    r2_performance = helper_report(evaluation_metric=r2, list_of_ranges=[0.7, 0.5], operator=">")
+    r2_report = f"The model has a {r2_performance[1]} R2 score of {round(r2,2)} and a correlation of {round(correlation,2)}, {r2_tails[r2_performance[0]]}. "
+
+    # Generate MAE report
+    mae_performance = helper_report(evaluation_metric=mae, list_of_ranges=[10, 20], operator="<")
+    mae_report = f"The model has a {mae_performance[1]} Mean Absolute Error of {round(mae,2)}. "
+
+    # Generate MSE report
+    mse_performance = helper_report(evaluation_metric=mse, list_of_ranges=[100, 1000], operator="<")
+    mse_report = f"The model has a {mse_performance[1]} Mean Squared Error of {round(mse, 2)}, {me_tails[mae_performance[0]]}. "
+
+    message = r2_report + mae_report + mse_report
+    total_score = r2_performance[0] + mae_performance[0] + mse_performance[0]
+
+    if total_score == 6:
+        return message + message_tails['good']
+    elif total_score >= 2:
+        return message + message_tails['neutral']
+    else:
+        return message + message_tails['bad']
+def helper_report(evaluation_metric, list_of_ranges, operator):
+    if operator == "<":
+        if evaluation_metric < list_of_ranges[0]:
+            performance = (2, "low")
+        elif evaluation_metric < list_of_ranges[1]:
+            performance = (1, "moderate")
+        else:
+            performance = (0, "high")
+    else:
+        if evaluation_metric > list_of_ranges[0]:
+            performance = (2, "high")
+        elif evaluation_metric > list_of_ranges[1]:
+            performance = (1, "moderate")
+        else:
+            performance = (0, "low")
+    return performance
+
 
