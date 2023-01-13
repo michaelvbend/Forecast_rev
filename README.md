@@ -112,23 +112,22 @@ To get a local copy up and running follow these simple example steps.
 This is an example of how to list things you need to use the software and how to install them.
 * npm
   ```sh
-  npm install npm@latest -g
+  npm install -r requirements.txt
   ```
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/michaelvbend/Forecast_rev.git
    ```
-3. Install NPM packages
+3. Install requirements
    ```sh
-   npm install
+   pip install -r requirements.txt
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+4. run flask
+   ```sh
+   python3 app.py
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -138,9 +137,16 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+So the website is designed to help users make predictions about how many clicks and impressions 
+they can expect for a given budget. Users can create an account or log in if they already have an 
+account.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+<a href="https://ibb.co/GvPTG7B"><img src="https://i.ibb.co/Y7jZJ2Y/Login.png" alt="Login" border="0"></a>
+
+Once logged in, they can choose an existing Facebook ad campaign for which they want to make 
+predictions. Then they can specify whether they want to make predictions for clicks or impressions 
+and enter the number of euros they want to spend. 
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
