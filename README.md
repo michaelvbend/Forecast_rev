@@ -18,12 +18,7 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+
 
 
 
@@ -82,7 +77,7 @@ can expect for a given budget.
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://ibb.co/zSk4r99)
+[![Product Name Screen Shot][product-screenshot]](https://i.ibb.co/2jbkyVV/Demo.png)
 
 This website is designed to help users make predictions about how many clicks and impressions they 
 can expect for a given budget. This is done through a linear regression model built in Python and 
