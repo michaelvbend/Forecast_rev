@@ -139,11 +139,18 @@ Once logged in, they can choose an existing Facebook ad campaign for which they 
 predictions. Then they can specify whether they want to make predictions for clicks or impressions 
 and enter the number of euros they want to spend. 
 
-<a href="https://ibb.co/qdkcdNk"><img src="https://i.ibb.co/pxJMxfJ/Overview.png" alt="Overview" border="0"></a><br /><a target='_blank' href='https://freeonlinedice.com/'>d&d dice roller</a><br />
+<a href="https://ibb.co/qdkcdNk"><img src="https://i.ibb.co/pxJMxfJ/Overview.png" alt="Overview" border="0"></a>
 
 The model is built based on this data and the user is shown whether or not the prediction is reliable 
 based on the evaluation values given in a table. The user also has the option to save this prediction 
 in their account.
+
+<a href="https://ibb.co/7KmxgrV"><img src="https://i.ibb.co/dDYsbk6/Prediction.png" alt="Prediction" border="0"></a>
+
+This prediction can then be retrieved under the "My Account" tab and downloaded to a PDF file. 
+Note that this functionality is only available locally, not online.
+
+<a href="https://ibb.co/4pc32sS"><img src="https://i.ibb.co/Fz9CXsY/Account.png" alt="Account" border="0"></a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -152,13 +159,10 @@ in their account.
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
-
+- [ ] Let user upload their own datasets
+    - [ ] Check if dataset is compatible with code
+- [ ] Create full reported (Charts included)
+  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -181,21 +185,12 @@ Don't forget to give the project a star! Thanks again!
 
 
 
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Michael vd Bend
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/github_username/repo_name](https://github.com/michaelvbend/Forecast_rev)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -205,8 +200,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 ## Acknowledgments
 
 * []()
-* []()
-* []()
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
