@@ -78,7 +78,7 @@ can expect for a given budget.
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://i.ibb.co/2jbkyVV/Demo.png)
-
+<img src="https://i.ibb.co/2jbkyVV/Demo.png" alt="Logo" width="80" height="80">
 This website is designed to help users make predictions about how many clicks and impressions they 
 can expect for a given budget. This is done through a linear regression model built in Python and 
 using Flask as the back-end framework. Currently, users cannot upload their own dataset, but a 
