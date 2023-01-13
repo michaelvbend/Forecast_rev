@@ -53,17 +53,22 @@ def logout():
     return redirect(url_for("login"))
 
 
+
 @app.route('/pdf/<prediction_id>', methods=['GET'])
 def generate_pdf(prediction_id):
     path_wkhtmltopdf = r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe'
-    config = pdfkit.configuration(wkhtmltopdf=path_wkhtmltopdf)
-    result = Predictions.query.filter_by(id=prediction_id).first()
-    res = render_template('pdf.html', result=result)
-    response_string = pdfkit.from_string(res, configuration=config)
-    response = make_response(response_string)
-    response.headers['Content-Type'] = 'application/pdf'
-    response.headers['Content-Disposition'] = 'attachment;filename=prediction.pdf'
-    return response
+    try:
+        config = pdfkit.configuration(wkhtmltopdf=path_wkhtmltopdf)
+        result = Predictions.query.filter_by(id=prediction_id).first()
+        res = render_template('pdf.html', result=result)
+        response_string = pdfkit.from_string(res, configuration=config)
+        response = make_response(response_string)
+        response.headers['Content-Type'] = 'application/pdf'
+        response.headers['Content-Disposition'] = 'attachment;filename=prediction.pdf'
+        return response
+    except:
+            flash("Site is not compatible with requirements",category="warning")
+            return redirect(url_for('index'))
 
 @app.route("/")
 @app.route("/home",methods=["GET", "POST"])
