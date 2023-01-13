@@ -34,19 +34,20 @@
     <img src="webapp/static/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Advertisement Predictor</h3>
 
   <p align="center">
-    project_description
+    This website is designed to help users make predictions about how many clicks and impressions they 
+can expect for a given budget.
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/michaelvbend/Forecast_rev/tree/main/webapp/documentation"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://michaelvbend.pythonanywhere.com">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/michaelvbend/Forecast_rev/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/michaelvbend/Forecast_rev/issues">Request Feature</a>
   </p>
 </div>
 
@@ -72,9 +73,7 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -83,9 +82,15 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://ibb.co/zSk4r99)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+This website is designed to help users make predictions about how many clicks and impressions they 
+can expect for a given budget. This is done through a linear regression model built in Python and 
+using Flask as the back-end framework. Currently, users cannot upload their own dataset, but a 
+hard-coded dataset has been added for demonstration and time purposes. In the future, this will be 
+worked on so that users can upload their own dataset and build a linear regression model on this. 
+The website is currently only compatible with Facebook ad data.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
