@@ -35,7 +35,7 @@
     This website is designed to help users make predictions about how many clicks and impressions they 
 can expect for a given budget.
     <br />
-    <a href="https://github.com/michaelvbend/Forecast_rev/tree/main/webapp/documentation"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/michaelvbend/Forecast_rev/tree/main/webapp/documentation.md"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://michaelvbend.pythonanywhere.com">View Demo</a>
